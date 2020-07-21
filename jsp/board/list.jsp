@@ -18,6 +18,7 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="/Mission-WEB/css/layout.css">
+<link rel="stylesheet" href="/Mission-WEB/css/board.css">
 <script>
 	function goWriteForm() {
 		//location.href = "writeForm.jsp";
@@ -43,8 +44,8 @@
 				<th width="16%">글쓴이</th>
 				<th width="20%">등록일</th>
 			</tr>
-			<c:forEach items="${ boardList }" var="board">
-				<tr>
+			<c:forEach items="${ boardList }" var="board" varStatus="loop">
+				<tr <c:if test="${ loop.count mod 2 eq 0 }">class="even"</c:if>>	<!-- 짝수번째에만 even이라는 class 속성 부여 -->
 					<td>${ board.no }</td>
 					<td>
 						<a href="detail.jsp?no=${ board.no }">

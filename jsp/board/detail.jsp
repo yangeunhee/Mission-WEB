@@ -38,7 +38,10 @@
 		switch(type) {
 		case 'U' : 
 			break;
-		case 'D' : 
+		case 'D' :
+			if(confirm('삭제하시겠습니까?')){
+				location.href = "delete.jsp?no=${ param.no }";	//el은 자바스크립트 안에서 "안에 넣어줘야함"
+			}
 			break;
 		case 'L' : 
 			location.href = "list.jsp"

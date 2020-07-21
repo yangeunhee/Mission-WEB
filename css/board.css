@@ -1,0 +1,33 @@
+@charset "UTF-8";
+table, th, td {
+	border : 1px solid #D4E0EE;
+	border-collapse: collapse;
+	font-family: verdana, sans-serif;
+	color: #555;
+}
+
+th, td {
+	padding: 5px;
+}
+
+td a:link, td a:visited {	/* td태그 안의 a태그 안의 link */
+	color:#719ABE;
+	text-decoration: none; /* underline 지우기 */
+}
+
+td a:hover {
+	text-decoration: underline;
+}
+
+table th {
+	background-color: #E6EDF5;
+	color: #4F76A3;
+}
+
+/* tr:nth-child(odd) {
+	background-color: #F7F9FC;
+} */
+
+tr.even { /* tr의 속성이 even이라면 */
+	background-color: #F7F9FC;
+}
